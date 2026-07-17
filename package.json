@@ -1,0 +1,33 @@
+{
+  "name": "michaelstone",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "scan-media": "node scripts/scan-media.mjs",
+    "predev": "npm run scan-media",
+    "dev": "vite",
+    "prebuild": "npm run scan-media",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "convert:wav": "bash scripts/convert-wav-to-mp3.sh",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=michaelstone"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1",
+    "wrangler": "^4.111.0"
+  }
+}
