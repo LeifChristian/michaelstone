@@ -16,7 +16,7 @@ export type GeneratedTrack = {
   downloadName: string
 }
 
-export const generatedHeroImage: string | null = "/images/001.jpg"
+export const generatedHeroImage: string | null = "/images/hero.jpg"
 
 export const generatedGalleryImages: GeneratedGalleryImage[] = [
   {
@@ -33,534 +33,528 @@ export const generatedGalleryImages: GeneratedGalleryImage[] = [
   },
   {
     "id": "img-3",
-    "src": "/images/003.jpg",
-    "alt": "003",
-    "caption": "003"
-  },
-  {
-    "id": "img-4",
     "src": "/images/004.jpg",
     "alt": "004",
     "caption": "004"
   },
   {
-    "id": "img-5",
+    "id": "img-4",
     "src": "/images/005.jpg",
     "alt": "005",
     "caption": "005"
   },
   {
-    "id": "img-6",
+    "id": "img-5",
     "src": "/images/006.jpg",
     "alt": "006",
     "caption": "006"
   },
   {
-    "id": "img-7",
+    "id": "img-6",
     "src": "/images/007.jpg",
     "alt": "007",
     "caption": "007"
   },
   {
-    "id": "img-8",
+    "id": "img-7",
     "src": "/images/008.jpg",
     "alt": "008",
     "caption": "008"
   },
   {
-    "id": "img-9",
+    "id": "img-8",
     "src": "/images/009.jpg",
     "alt": "009",
     "caption": "009"
   },
   {
-    "id": "img-10",
+    "id": "img-9",
     "src": "/images/010.jpg",
     "alt": "010",
     "caption": "010"
   },
   {
-    "id": "img-11",
+    "id": "img-10",
     "src": "/images/011.jpg",
     "alt": "011",
     "caption": "011"
   },
   {
-    "id": "img-12",
+    "id": "img-11",
     "src": "/images/012.jpg",
     "alt": "012",
     "caption": "012"
   },
   {
-    "id": "img-13",
+    "id": "img-12",
     "src": "/images/013.jpg",
     "alt": "013",
     "caption": "013"
   },
   {
-    "id": "img-14",
+    "id": "img-13",
     "src": "/images/014.jpg",
     "alt": "014",
     "caption": "014"
   },
   {
-    "id": "img-15",
+    "id": "img-14",
     "src": "/images/015.jpg",
     "alt": "015",
     "caption": "015"
   },
   {
-    "id": "img-16",
+    "id": "img-15",
     "src": "/images/016.jpg",
     "alt": "016",
     "caption": "016"
   },
   {
-    "id": "img-17",
+    "id": "img-16",
     "src": "/images/017.jpg",
     "alt": "017",
     "caption": "017"
   },
   {
-    "id": "img-18",
+    "id": "img-17",
     "src": "/images/018.jpg",
     "alt": "018",
     "caption": "018"
   },
   {
-    "id": "img-19",
+    "id": "img-18",
     "src": "/images/019.jpg",
     "alt": "019",
     "caption": "019"
   },
   {
-    "id": "img-20",
+    "id": "img-19",
     "src": "/images/020.jpg",
     "alt": "020",
     "caption": "020"
   },
   {
-    "id": "img-21",
+    "id": "img-20",
     "src": "/images/021.jpg",
     "alt": "021",
     "caption": "021"
   },
   {
-    "id": "img-22",
+    "id": "img-21",
     "src": "/images/022.jpg",
     "alt": "022",
     "caption": "022"
   },
   {
-    "id": "img-23",
+    "id": "img-22",
     "src": "/images/023.jpg",
     "alt": "023",
     "caption": "023"
   },
   {
-    "id": "img-24",
+    "id": "img-23",
     "src": "/images/024.jpg",
     "alt": "024",
     "caption": "024"
   },
   {
-    "id": "img-25",
+    "id": "img-24",
     "src": "/images/025.jpg",
     "alt": "025",
     "caption": "025"
   },
   {
-    "id": "img-26",
+    "id": "img-25",
     "src": "/images/026.jpg",
     "alt": "026",
     "caption": "026"
   },
   {
-    "id": "img-27",
+    "id": "img-26",
     "src": "/images/027.jpg",
     "alt": "027",
     "caption": "027"
   },
   {
-    "id": "img-28",
+    "id": "img-27",
     "src": "/images/028.jpg",
     "alt": "028",
     "caption": "028"
   },
   {
-    "id": "img-29",
+    "id": "img-28",
     "src": "/images/029.jpg",
     "alt": "029",
     "caption": "029"
   },
   {
-    "id": "img-30",
+    "id": "img-29",
     "src": "/images/030.jpg",
     "alt": "030",
     "caption": "030"
   },
   {
-    "id": "img-31",
+    "id": "img-30",
     "src": "/images/031.jpg",
     "alt": "031",
     "caption": "031"
   },
   {
-    "id": "img-32",
+    "id": "img-31",
     "src": "/images/032.jpg",
     "alt": "032",
     "caption": "032"
   },
   {
-    "id": "img-33",
+    "id": "img-32",
     "src": "/images/033.jpg",
     "alt": "033",
     "caption": "033"
   },
   {
-    "id": "img-34",
+    "id": "img-33",
     "src": "/images/034.jpg",
     "alt": "034",
     "caption": "034"
   },
   {
-    "id": "img-35",
+    "id": "img-34",
     "src": "/images/035.jpg",
     "alt": "035",
     "caption": "035"
   },
   {
-    "id": "img-36",
+    "id": "img-35",
     "src": "/images/036.jpg",
     "alt": "036",
     "caption": "036"
   },
   {
-    "id": "img-37",
+    "id": "img-36",
     "src": "/images/037.jpg",
     "alt": "037",
     "caption": "037"
   },
   {
-    "id": "img-38",
+    "id": "img-37",
     "src": "/images/038.jpg",
     "alt": "038",
     "caption": "038"
   },
   {
-    "id": "img-39",
+    "id": "img-38",
     "src": "/images/039.jpg",
     "alt": "039",
     "caption": "039"
   },
   {
-    "id": "img-40",
+    "id": "img-39",
     "src": "/images/040.jpg",
     "alt": "040",
     "caption": "040"
   },
   {
-    "id": "img-41",
+    "id": "img-40",
     "src": "/images/041.jpg",
     "alt": "041",
     "caption": "041"
   },
   {
-    "id": "img-42",
+    "id": "img-41",
     "src": "/images/042.jpg",
     "alt": "042",
     "caption": "042"
   },
   {
-    "id": "img-43",
+    "id": "img-42",
     "src": "/images/043.jpg",
     "alt": "043",
     "caption": "043"
   },
   {
-    "id": "img-44",
+    "id": "img-43",
     "src": "/images/044.jpg",
     "alt": "044",
     "caption": "044"
   },
   {
-    "id": "img-45",
+    "id": "img-44",
     "src": "/images/045.jpg",
     "alt": "045",
     "caption": "045"
   },
   {
-    "id": "img-46",
+    "id": "img-45",
     "src": "/images/046.jpg",
     "alt": "046",
     "caption": "046"
   },
   {
-    "id": "img-47",
+    "id": "img-46",
     "src": "/images/047.jpg",
     "alt": "047",
     "caption": "047"
   },
   {
-    "id": "img-48",
+    "id": "img-47",
     "src": "/images/048.jpg",
     "alt": "048",
     "caption": "048"
   },
   {
-    "id": "img-49",
+    "id": "img-48",
     "src": "/images/049.jpg",
     "alt": "049",
     "caption": "049"
   },
   {
-    "id": "img-50",
+    "id": "img-49",
     "src": "/images/050.jpg",
     "alt": "050",
     "caption": "050"
   },
   {
-    "id": "img-51",
+    "id": "img-50",
     "src": "/images/051.jpg",
     "alt": "051",
     "caption": "051"
   },
   {
-    "id": "img-52",
+    "id": "img-51",
     "src": "/images/052.jpg",
     "alt": "052",
     "caption": "052"
   },
   {
-    "id": "img-53",
+    "id": "img-52",
     "src": "/images/053.jpg",
     "alt": "053",
     "caption": "053"
   },
   {
-    "id": "img-54",
+    "id": "img-53",
     "src": "/images/054.jpg",
     "alt": "054",
     "caption": "054"
   },
   {
-    "id": "img-55",
+    "id": "img-54",
     "src": "/images/055.jpg",
     "alt": "055",
     "caption": "055"
   },
   {
-    "id": "img-56",
+    "id": "img-55",
     "src": "/images/056.jpg",
     "alt": "056",
     "caption": "056"
   },
   {
-    "id": "img-57",
+    "id": "img-56",
     "src": "/images/057.jpg",
     "alt": "057",
     "caption": "057"
   },
   {
-    "id": "img-58",
+    "id": "img-57",
     "src": "/images/058.jpg",
     "alt": "058",
     "caption": "058"
   },
   {
-    "id": "img-59",
+    "id": "img-58",
     "src": "/images/059.jpg",
     "alt": "059",
     "caption": "059"
   },
   {
-    "id": "img-60",
+    "id": "img-59",
     "src": "/images/060.jpg",
     "alt": "060",
     "caption": "060"
   },
   {
-    "id": "img-61",
+    "id": "img-60",
     "src": "/images/061.jpg",
     "alt": "061",
     "caption": "061"
   },
   {
-    "id": "img-62",
+    "id": "img-61",
     "src": "/images/062.jpg",
     "alt": "062",
     "caption": "062"
   },
   {
-    "id": "img-63",
+    "id": "img-62",
     "src": "/images/063.jpg",
     "alt": "063",
     "caption": "063"
   },
   {
-    "id": "img-64",
+    "id": "img-63",
     "src": "/images/064.jpg",
     "alt": "064",
     "caption": "064"
   },
   {
-    "id": "img-65",
+    "id": "img-64",
     "src": "/images/065.jpg",
     "alt": "065",
     "caption": "065"
   },
   {
-    "id": "img-66",
+    "id": "img-65",
     "src": "/images/066.jpg",
     "alt": "066",
     "caption": "066"
   },
   {
-    "id": "img-67",
+    "id": "img-66",
     "src": "/images/067.jpg",
     "alt": "067",
     "caption": "067"
   },
   {
-    "id": "img-68",
+    "id": "img-67",
     "src": "/images/068.jpg",
     "alt": "068",
     "caption": "068"
   },
   {
-    "id": "img-69",
+    "id": "img-68",
     "src": "/images/069.jpg",
     "alt": "069",
     "caption": "069"
   },
   {
-    "id": "img-70",
+    "id": "img-69",
     "src": "/images/070.jpg",
     "alt": "070",
     "caption": "070"
   },
   {
-    "id": "img-71",
+    "id": "img-70",
     "src": "/images/071.jpg",
     "alt": "071",
     "caption": "071"
   },
   {
-    "id": "img-72",
+    "id": "img-71",
     "src": "/images/072.jpg",
     "alt": "072",
     "caption": "072"
   },
   {
-    "id": "img-73",
+    "id": "img-72",
     "src": "/images/073.jpg",
     "alt": "073",
     "caption": "073"
   },
   {
-    "id": "img-74",
+    "id": "img-73",
     "src": "/images/074.jpg",
     "alt": "074",
     "caption": "074"
   },
   {
-    "id": "img-75",
+    "id": "img-74",
     "src": "/images/075.jpg",
     "alt": "075",
     "caption": "075"
   },
   {
-    "id": "img-76",
+    "id": "img-75",
     "src": "/images/076.jpg",
     "alt": "076",
     "caption": "076"
   },
   {
-    "id": "img-77",
+    "id": "img-76",
     "src": "/images/077.jpg",
     "alt": "077",
     "caption": "077"
   },
   {
-    "id": "img-78",
+    "id": "img-77",
     "src": "/images/078.jpg",
     "alt": "078",
     "caption": "078"
   },
   {
-    "id": "img-79",
+    "id": "img-78",
     "src": "/images/079.jpg",
     "alt": "079",
     "caption": "079"
   },
   {
-    "id": "img-80",
+    "id": "img-79",
     "src": "/images/080.jpg",
     "alt": "080",
     "caption": "080"
   },
   {
-    "id": "img-81",
+    "id": "img-80",
     "src": "/images/081.jpg",
     "alt": "081",
     "caption": "081"
   },
   {
-    "id": "img-82",
+    "id": "img-81",
     "src": "/images/082.jpg",
     "alt": "082",
     "caption": "082"
   },
   {
-    "id": "img-83",
+    "id": "img-82",
     "src": "/images/083.jpg",
     "alt": "083",
     "caption": "083"
   },
   {
-    "id": "img-84",
+    "id": "img-83",
     "src": "/images/084.jpg",
     "alt": "084",
     "caption": "084"
   },
   {
-    "id": "img-85",
+    "id": "img-84",
     "src": "/images/085.jpg",
     "alt": "085",
     "caption": "085"
   },
   {
-    "id": "img-86",
+    "id": "img-85",
     "src": "/images/086.jpg",
     "alt": "086",
     "caption": "086"
   },
   {
-    "id": "img-87",
+    "id": "img-86",
     "src": "/images/087.jpg",
     "alt": "087",
     "caption": "087"
   },
   {
-    "id": "img-88",
+    "id": "img-87",
     "src": "/images/088.jpg",
     "alt": "088",
     "caption": "088"
   },
   {
-    "id": "img-89",
+    "id": "img-88",
     "src": "/images/089.jpg",
     "alt": "089",
     "caption": "089"
   },
   {
-    "id": "img-90",
+    "id": "img-89",
     "src": "/images/090.jpg",
     "alt": "090",
     "caption": "090"
   },
   {
-    "id": "img-91",
+    "id": "img-90",
     "src": "/images/091.jpg",
     "alt": "091",
     "caption": "091"
