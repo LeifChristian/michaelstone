@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
+import { RouteErrorBoundary } from './components/RouteErrorBoundary'
 import { Home } from './pages/Home'
 
 const Music = lazy(() =>
@@ -11,6 +12,9 @@ const Gallery = lazy(() =>
 )
 const Biography = lazy(() =>
   import('./pages/Biography').then((m) => ({ default: m.Biography })),
+)
+const Lyrics = lazy(() =>
+  import('./pages/Lyrics').then((m) => ({ default: m.Lyrics })),
 )
 
 function PageFallback() {
@@ -26,25 +30,41 @@ export default function App() {
           <Route
             path="music"
             element={
-              <Suspense fallback={<PageFallback />}>
-                <Music />
-              </Suspense>
+              <RouteErrorBoundary label="Music">
+                <Suspense fallback={<PageFallback />}>
+                  <Music />
+                </Suspense>
+              </RouteErrorBoundary>
+            }
+          />
+          <Route
+            path="lyrics"
+            element={
+              <RouteErrorBoundary label="Lyrics">
+                <Suspense fallback={<PageFallback />}>
+                  <Lyrics />
+                </Suspense>
+              </RouteErrorBoundary>
             }
           />
           <Route
             path="gallery"
             element={
-              <Suspense fallback={<PageFallback />}>
-                <Gallery />
-              </Suspense>
+              <RouteErrorBoundary label="Photos">
+                <Suspense fallback={<PageFallback />}>
+                  <Gallery />
+                </Suspense>
+              </RouteErrorBoundary>
             }
           />
           <Route
             path="biography"
             element={
-              <Suspense fallback={<PageFallback />}>
-                <Biography />
-              </Suspense>
+              <RouteErrorBoundary label="Story">
+                <Suspense fallback={<PageFallback />}>
+                  <Biography />
+                </Suspense>
+              </RouteErrorBoundary>
             }
           />
           <Route path="*" element={<Navigate to="/" replace />} />

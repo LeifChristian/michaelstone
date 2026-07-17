@@ -60,6 +60,10 @@ export function Home() {
           <span>Photographs</span>
           <span aria-hidden="true">→</span>
         </Link>
+        <Link to="/lyrics" className="path-link">
+          <span>Lyrics</span>
+          <span aria-hidden="true">→</span>
+        </Link>
         <Link to="/biography" className="path-link">
           <span>His story</span>
           <span aria-hidden="true">→</span>

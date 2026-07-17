@@ -6,26 +6,26 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-function scanMediaPlugin(): Plugin {
+function scanContentPlugin(): Plugin {
   const run = () => {
-    execSync('node scripts/scan-media.mjs', {
-      cwd: __dirname,
-      stdio: 'inherit',
-    })
+    execSync('npm run scan', { cwd: __dirname, stdio: 'inherit' })
   }
 
   return {
-    name: 'scan-media',
+    name: 'scan-content',
     buildStart() {
       run()
     },
     configureServer(server) {
       run()
-      const imagesDir = resolve(__dirname, 'public/images')
-      const musicDir = resolve(__dirname, 'public/music')
-      server.watcher.add([imagesDir, musicDir])
+      const watchDirs = [
+        resolve(__dirname, 'public/images'),
+        resolve(__dirname, 'public/music'),
+        resolve(__dirname, 'content/lyrics'),
+      ]
+      server.watcher.add(watchDirs)
       server.watcher.on('all', (_event, file) => {
-        if (file.startsWith(imagesDir) || file.startsWith(musicDir)) {
+        if (watchDirs.some((dir) => file.startsWith(dir))) {
           run()
           server.ws.send({ type: 'full-reload' })
         }
@@ -35,5 +35,5 @@ function scanMediaPlugin(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [react(), scanMediaPlugin()],
+  plugins: [react(), scanContentPlugin()],
 })

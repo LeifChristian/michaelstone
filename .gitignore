@@ -15,6 +15,10 @@ dist-ssr
 .env.*
 !.env.example
 
+# Large source masters (Cloudflare Pages max file = 25 MiB)
+source-media/**/*.wav
+public/wavs/**/*.wav
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -25,3 +29,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+STONE*.zip
