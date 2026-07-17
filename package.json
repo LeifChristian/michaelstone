@@ -12,7 +12,8 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "convert:wav": "bash scripts/convert-wav-to-mp3.sh",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=michaelstone"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=michaelstone --branch=main",
+    "cf:setup": "bash scripts/cloudflare-setup.sh"
   },
   "dependencies": {
     "react": "^19.2.7",

@@ -1,3 +1,6 @@
 name = "michaelstone"
 compatibility_date = "2026-07-16"
 pages_build_output_dir = "dist"
+
+# Used by GitHub Actions + local deploy. Set in repo secrets or .env (not committed).
+# account_id = "your-account-id"
