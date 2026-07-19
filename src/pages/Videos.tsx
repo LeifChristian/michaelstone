@@ -12,6 +12,12 @@ type Video =
     }
   | {
       title: string
+      type: 'youtube'
+      embedSrc: string
+      watchUrl: string
+    }
+  | {
+      title: string
       type: 'link'
       watchUrl: string
       label: string
@@ -22,6 +28,12 @@ const videos: Video[] = [
     title: 'Michael Stone',
     type: 'local',
     src: '/videos/01-michael.mp4',
+  },
+  {
+    title: 'Soldier – Michael Stone',
+    type: 'youtube',
+    embedSrc: 'https://www.youtube.com/embed/uu4od9A9j5s',
+    watchUrl: 'https://www.youtube.com/watch?v=uu4od9A9j5s',
   },
   {
     title: 'Renaissance Man – Spoken Word',
@@ -76,13 +88,13 @@ export function Videos() {
                   <h2 className="video-title">{video.title}</h2>
                 </div>
               </>
-            ) : video.type === 'vimeo' ? (
+            ) : video.type === 'vimeo' || video.type === 'youtube' ? (
               <>
                 <div className="video-embed">
                   <iframe
                     src={video.embedSrc}
                     title={video.title}
-                    allow="autoplay; fullscreen; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                   />
                 </div>
@@ -94,7 +106,7 @@ export function Videos() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Watch on Vimeo
+                    {video.type === 'youtube' ? 'Watch on YouTube' : 'Watch on Vimeo'}
                   </a>
                 </div>
               </>
