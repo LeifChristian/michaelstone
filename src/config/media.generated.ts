@@ -572,9 +572,9 @@ export const generatedTracks: GeneratedTrack[] = [
   {
     "id": "track-2",
     "title": "Soldier Mix",
-    "src": "/music/02-Soldier Mix.m4a",
-    "filename": "02-Soldier Mix.m4a",
-    "downloadName": "02-Soldier Mix.m4a"
+    "src": "/music/02-Soldier Mix.mp3",
+    "filename": "02-Soldier Mix.mp3",
+    "downloadName": "02-Soldier Mix.mp3"
   },
   {
     "id": "track-3",
