@@ -5,6 +5,7 @@ type AudioPlayerProps = {
   tracks: Track[]
   currentId: string | null
   onSelect: (id: string) => void
+  downloadsEnabled?: boolean
 }
 
 function formatTime(seconds: number) {
@@ -14,7 +15,7 @@ function formatTime(seconds: number) {
   return `${m}:${s.toString().padStart(2, '0')}`
 }
 
-export function AudioPlayer({ tracks, currentId, onSelect }: AudioPlayerProps) {
+export function AudioPlayer({ tracks, currentId, onSelect, downloadsEnabled = true }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
@@ -231,7 +232,7 @@ export function AudioPlayer({ tracks, currentId, onSelect }: AudioPlayerProps) {
           </div>
         </div>
 
-        {current ? (
+        {current && downloadsEnabled ? (
           <a
             className="player-download"
             href={current.src}
@@ -250,6 +251,7 @@ export function AudioPlayer({ tracks, currentId, onSelect }: AudioPlayerProps) {
         playing={playing}
         durations={durations}
         onSelect={onSelect}
+        downloadsEnabled={downloadsEnabled}
       />
     </div>
   )
@@ -261,12 +263,14 @@ function TrackList({
   playing,
   durations,
   onSelect,
+  downloadsEnabled,
 }: {
   tracks: Track[]
   currentId: string | null
   playing: boolean
   durations: Record<string, string>
   onSelect: (id: string) => void
+  downloadsEnabled: boolean
 }) {
   return (
     <ol className="track-list">
@@ -297,16 +301,18 @@ function TrackList({
                 {durations[track.id] ?? track.duration ?? '—:—'}
               </span>
             </button>
-            <a
-              className="track-download"
-              href={track.src}
-              download={track.downloadName}
-              aria-label={`Download ${track.title}`}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <DownloadIcon />
-              <span className="track-download-label">Download</span>
-            </a>
+            {downloadsEnabled && (
+              <a
+                className="track-download"
+                href={track.src}
+                download={track.downloadName}
+                aria-label={`Download ${track.title}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <DownloadIcon />
+                <span className="track-download-label">Download</span>
+              </a>
+            )}
           </li>
         )
       })}

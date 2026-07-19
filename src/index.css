@@ -936,6 +936,25 @@ p {
   }
 }
 
+/* ── Downloads Toggle ── */
+.downloads-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted, #aaa);
+  cursor: pointer;
+  user-select: none;
+}
+
+.downloads-toggle input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent, #6c8cff);
+  cursor: pointer;
+}
+
 /* ── Videos ── */
 .videos-page {
   padding: 2rem 1rem;
