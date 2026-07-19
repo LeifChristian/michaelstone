@@ -3,9 +3,9 @@ import { generatedHeroImage } from './media.generated'
 export const site = {
   name: 'Michael Stone',
   title: 'Michael Stone',
-  subtitle: 'Poet · Musician · Friend',
+  subtitle: 'January 18, 1951 – 2026',
   description:
-    'A quiet memorial for Michael Stone — his music, photographs, and story, kept here so anyone can remember him.',
+    'Michael Eugene Stone was a poet, musician, and friend whose presence left a lasting impression on everyone who knew him.',
   url: 'https://michaelstonepoet.com',
   /** Prefer public/images/hero.jpg — falls back to first gallery image */
   heroImage: generatedHeroImage ?? '/images/hero.jpg',
