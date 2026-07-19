@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,550;9..144,650&family=Figtree:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #e8ebe6;
-  --bg-deep: #d5dbd4;
-  --ink: #1c221f;
-  --ink-soft: #4a554f;
-  --ink-mute: #6d7871;
-  --line: rgba(28, 34, 31, 0.12);
-  --surface: rgba(250, 251, 248, 0.72);
-  --accent: #2f5d4f;
-  --accent-soft: #3f7463;
-  --shadow: 0 24px 60px rgba(28, 34, 31, 0.12);
+  color-scheme: dark;
+  --bg: #121614;
+  --bg-deep: #0c100e;
+  --ink: #e8ebe6;
+  --ink-soft: #b4bbb5;
+  --ink-mute: #7a847d;
+  --line: rgba(232, 235, 230, 0.12);
+  --surface: rgba(28, 34, 31, 0.72);
+  --accent: #6fa894;
+  --accent-soft: #8cbcab;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   --radius: 2px;
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Figtree', 'Helvetica Neue', sans-serif;
@@ -38,9 +39,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(1200px 700px at 80% -10%, rgba(95, 120, 108, 0.18), transparent 55%),
-    radial-gradient(900px 500px at 0% 20%, rgba(180, 170, 140, 0.16), transparent 50%),
-    linear-gradient(180deg, #eef1ec 0%, var(--bg) 40%, var(--bg-deep) 100%);
+    radial-gradient(1200px 700px at 80% -10%, rgba(95, 120, 108, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 0% 20%, rgba(80, 90, 70, 0.1), transparent 50%),
+    linear-gradient(180deg, #161b18 0%, var(--bg) 40%, var(--bg-deep) 100%);
   background-attachment: fixed;
 }
 
@@ -107,7 +108,7 @@ p {
   min-height: var(--header-h);
   padding: 0.85rem 1.25rem;
   backdrop-filter: blur(14px);
-  background: rgba(232, 235, 230, 0.78);
+  background: rgba(12, 16, 14, 0.82);
   border-bottom: 1px solid var(--line);
 }
 
@@ -283,9 +284,9 @@ p {
   padding: 1.5rem 1rem 0;
   display: grid;
   gap: 1rem;
-  color: var(--text, #222);
+  color: var(--ink);
   line-height: 1.7;
-  background: #f3f1ec;
+  background: transparent;
 }
 
 .home-bio-title {
@@ -304,7 +305,7 @@ p {
 }
 
 .home-bio p {
-  color: var(--text-muted, #444);
+  color: var(--ink-soft);
 }
 
 .button {
@@ -481,7 +482,7 @@ p {
 
 .player-skip:hover:not(:disabled) {
   color: var(--ink);
-  background: rgba(28, 34, 31, 0.06);
+  background: rgba(232, 235, 230, 0.08);
 }
 
 .player-skip:disabled {
@@ -498,14 +499,14 @@ p {
   font-size: 0.9rem;
   padding: 0.45rem 0.65rem;
   border: 1px solid var(--line);
-  background: rgba(250, 251, 248, 0.65);
+  background: rgba(232, 235, 230, 0.06);
   transition: color 200ms ease, border-color 200ms ease, background 200ms ease;
 }
 
 .player-download:hover,
 .track-download:hover {
   color: var(--ink);
-  border-color: rgba(28, 34, 31, 0.28);
+  border-color: rgba(232, 235, 230, 0.28);
 }
 
 .empty-state {
@@ -571,7 +572,7 @@ p {
 
 .track:hover,
 .track.is-active {
-  background: rgba(250, 251, 248, 0.7);
+  background: rgba(232, 235, 230, 0.06);
   border-color: var(--line);
 }
 
@@ -1011,7 +1012,7 @@ p {
 .video-title {
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--text, #222);
+  color: var(--ink);
   margin: 0;
 }
 
@@ -1026,7 +1027,7 @@ p {
 
 .video-watch-link {
   font-size: 0.9rem;
-  color: var(--text-muted, #555);
+  color: var(--ink-mute);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -1039,7 +1040,7 @@ p {
 }
 
 .video-link-note {
-  color: var(--text-muted, #555);
+  color: var(--ink-soft);
   margin: 0;
   line-height: 1.5;
 }
@@ -1047,7 +1048,7 @@ p {
 .video-privacy-note {
   margin-top: 2rem;
   font-size: 0.85rem;
-  color: var(--text-muted, #666);
+  color: var(--ink-mute);
   line-height: 1.5;
 }
 
