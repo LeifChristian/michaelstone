@@ -21,9 +21,9 @@ const videos: Video[] = [
   },
   {
     title: 'A Man of a Passion – Spoken Word',
-    type: 'vimeo',
-    embedSrc: 'https://player.vimeo.com/video/756011799',
+    type: 'link',
     watchUrl: 'https://vimeo.com/756011799',
+    label: 'Watch on Vimeo',
   },
   {
     title: 'City of Angels – Spoken Word',
@@ -72,7 +72,7 @@ export function Videos() {
               <div className="video-link-card">
                 <h2 className="video-title">{video.title}</h2>
                 <p className="video-link-note">
-                  This one can&apos;t be embedded here — open it on Facebook.
+                  Opens in a new tab.
                 </p>
                 <a
                   className="button button-primary"
@@ -87,11 +87,6 @@ export function Videos() {
           </div>
         ))}
       </div>
-      <p className="video-privacy-note">
-        If a Vimeo player says &quot;Sorry&quot;, the video owner needs to allow embeds for{' '}
-        <code>michaelstonepoet.com</code> and <code>michaelstone.pages.dev</code> in
-        Vimeo → Settings → Privacy.
-      </p>
     </section>
   )
 }
