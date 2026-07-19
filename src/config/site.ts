@@ -11,4 +11,6 @@ export const site = {
   heroImage: generatedHeroImage ?? '/images/hero.jpg',
   heroAlt: 'Portrait of Michael Stone',
   shareText: 'Remembering Michael Stone',
+  /** Set to false to hide all download buttons from the music player */
+  allowDownloads: true,
 } as const
