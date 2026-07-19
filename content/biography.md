@@ -8,7 +8,7 @@ At 18, Michael left his small-town roots to serve in the Air Force, bidding fare
 
 ## The Written Word
 
-Michael faced numerous struggles throughout his life, including battles with drugs and the challenges stemming from his accident. Yet, he found solace in writing, filling journals with poetry and lyrics that expressed his dreams, fears, and hopes. His musical journey flourished as he transformed his poetry into spoken word, collaborating with bands and befriending rock legends like Ronnie Wood, Steven Tyler, Joan Jett, Al Di Meola, and ZZ Top.
+Michael faced numerous struggles throughout his life, including battles with drugs and the challenges stemming from his accident. Yet, he found solace in writing, filling journals with poetry and lyrics that expressed his dreams, fears, and hopes — later given voice in songs like Road to Redemption, with its opening line: "The road to redemption, to the soul of my dreams." His musical journey flourished as he transformed his poetry into spoken word, collaborating with bands and befriending rock legends like Ronnie Wood, Steven Tyler, Joan Jett, Al Di Meola, and ZZ Top.
 
 ## Los Angeles & Montana
 

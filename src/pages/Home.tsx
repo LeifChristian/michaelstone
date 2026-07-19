@@ -68,7 +68,7 @@ export function Home() {
 
         <h3>The Written Word</h3>
         <p>
-          Michael faced numerous struggles throughout his life, including battles with drugs and the challenges stemming from his accident. Yet, he found solace in writing, filling journals with poetry and lyrics that expressed his dreams, fears, and hopes. His musical journey flourished as he transformed his poetry into spoken word, collaborating with bands and befriending rock legends like Ronnie Wood, Steven Tyler, Joan Jett, Al Di Meola, and ZZ Top.
+          Michael faced numerous struggles throughout his life, including battles with drugs and the challenges stemming from his accident. Yet, he found solace in writing, filling journals with poetry and lyrics that expressed his dreams, fears, and hopes — later given voice in songs like Road to Redemption, with its opening line: &quot;The road to redemption, to the soul of my dreams.&quot; His musical journey flourished as he transformed his poetry into spoken word, collaborating with bands and befriending rock legends like Ronnie Wood, Steven Tyler, Joan Jett, Al Di Meola, and ZZ Top.
         </p>
 
         <h3>Los Angeles &amp; Montana</h3>
