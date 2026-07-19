@@ -193,7 +193,7 @@ p {
   position: relative;
   margin-inline: calc(50% - 50vw);
   width: 100vw;
-  min-height: calc(100svh - var(--header-h));
+  min-height: min(70svh, 36rem);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -279,12 +279,13 @@ p {
 
 .home-bio {
   max-width: 42rem;
-  margin: 3rem auto 1rem;
-  padding: 0 1rem;
+  margin: 2rem auto 1rem;
+  padding: 1.5rem 1rem 0;
   display: grid;
   gap: 1rem;
   color: var(--text, #222);
   line-height: 1.7;
+  background: #f3f1ec;
 }
 
 .home-bio-title {
