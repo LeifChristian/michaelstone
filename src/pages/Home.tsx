@@ -56,6 +56,10 @@ export function Home() {
       </div>
 
       <div className="home-paths">
+        <Link to="/videos" className="path-link">
+          <span>Videos</span>
+          <span aria-hidden="true">→</span>
+        </Link>
         <Link to="/gallery" className="path-link">
           <span>Photographs</span>
           <span aria-hidden="true">→</span>

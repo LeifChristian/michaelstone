@@ -16,6 +16,9 @@ const Biography = lazy(() =>
 const Lyrics = lazy(() =>
   import('./pages/Lyrics').then((m) => ({ default: m.Lyrics })),
 )
+const Videos = lazy(() =>
+  import('./pages/Videos').then((m) => ({ default: m.Videos })),
+)
 
 function PageFallback() {
   return <div className="page-fallback" aria-live="polite">Loading…</div>
@@ -43,6 +46,16 @@ export default function App() {
               <RouteErrorBoundary label="Lyrics">
                 <Suspense fallback={<PageFallback />}>
                   <Lyrics />
+                </Suspense>
+              </RouteErrorBoundary>
+            }
+          />
+          <Route
+            path="videos"
+            element={
+              <RouteErrorBoundary label="Videos">
+                <Suspense fallback={<PageFallback />}>
+                  <Videos />
                 </Suspense>
               </RouteErrorBoundary>
             }
