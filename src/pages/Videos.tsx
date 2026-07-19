@@ -36,6 +36,12 @@ const videos: Video[] = [
     watchUrl: 'https://www.youtube.com/watch?v=uu4od9A9j5s',
   },
   {
+    title: 'Flora Martirosyan & Michael Stone – Armenian Genocide',
+    type: 'youtube',
+    embedSrc: 'https://www.youtube.com/embed/aJLtVZ6Xn4o',
+    watchUrl: 'https://www.youtube.com/watch?v=aJLtVZ6Xn4o',
+  },
+  {
     title: 'Renaissance Man – Spoken Word',
     type: 'vimeo',
     embedSrc: 'https://player.vimeo.com/video/756011964',
