@@ -73,7 +73,7 @@ export function Home() {
 
         <h3>Los Angeles &amp; Montana</h3>
         <p>
-          After spending several years in Los Angeles, where he worked on his music, poetry, and ran a masonry business, Michael eventually moved to Montana to care for his mother after his father's passing. There, he found a true home in the serene landscape, allowing him to reconnect with nature and enjoy life's simplicities. He performed at Maverik's Grill and formed a close friendship with Keith, the restaurant's proprietor.
+          After spending several years in Los Angeles, where he worked on his music and poetry, ran a masonry business, and managed nightclubs in Hollywood — and earlier in Florida — Michael eventually moved to Montana to care for his mother after his father's passing. There, he found a true home in the serene landscape, allowing him to reconnect with nature and enjoy life's simplicities. He performed at Maverik's Grill and formed a close friendship with Keith, the restaurant's proprietor.
         </p>
 
         <h3>Film &amp; Television</h3>
