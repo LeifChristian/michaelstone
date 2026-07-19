@@ -68,7 +68,13 @@ export function Home() {
 
         <h3>The Written Word</h3>
         <p>
-          Michael faced numerous struggles throughout his life, including battles with drugs and the challenges stemming from his accident. Yet, he found solace in writing, filling journals with poetry and lyrics that expressed his dreams, fears, and hopes — later given voice in songs like Road to Redemption, with its opening line: &quot;The road to redemption, to the soul of my dreams.&quot; His musical journey flourished as he transformed his poetry into spoken word, collaborating with bands and befriending rock legends like Ronnie Wood, Steven Tyler, Joan Jett, Al Di Meola, and ZZ Top.
+          Michael faced numerous struggles throughout his life, including battles with drugs and the challenges stemming from his accident. Through it all, he wrote — filling journals with poetry and lyrics that held his dreams, fears, and hard-won hopes. Those pages became the spoken-word pieces that define his voice: raw, searching, and unafraid of the dark.
+        </p>
+        <p>
+          In <em>Soldier</em>, he returned to the weight of service and what war leaves behind. In <em>City of Angels</em>, he turned a clear eye on Los Angeles — beauty and violence side by side, an angel walking Sunset in the rain while the city raced past. <em>The Deal</em>, <em>Misfit from Your Past</em>, and <em>Utopia</em> dig into temptation, survival, and a world that keeps breaking. <em>Crusade</em> questions power and faith; <em>Renaissance Man</em> reaches for rebirth — rising &quot;above the ashes like a burning flame.&quot; And in <em>Road to Redemption</em>, he names the long climb itself: &quot;the road to redemption, to the soul of my dreams,&quot; paved with heartache, grief, and the hope of leaving it all behind.
+        </p>
+        <p>
+          He carried that poetry into performance, collaborating with bands and finding friendship among musicians including Ronnie Wood, Steven Tyler, Joan Jett, Al Di Meola, and ZZ Top. His words remain here — on the Lyrics page, and in the recordings he left behind.
         </p>
 
         <h3>Los Angeles &amp; Montana</h3>
