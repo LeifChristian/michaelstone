@@ -76,6 +76,30 @@ export function Home() {
           After spending several years in Los Angeles, where he worked on his music, poetry, and ran a masonry business, Michael eventually moved to Montana to care for his mother after his father's passing. There, he found a true home in the serene landscape, allowing him to reconnect with nature and enjoy life's simplicities. He performed at Maverik's Grill and formed a close friendship with Keith, the restaurant's proprietor.
         </p>
 
+        <h3>Film &amp; Television</h3>
+        <ul className="home-bio-list">
+          <li>
+            <em>Opposite Corners</em> (1997) – Portrayed &quot;Billy the Butcher&quot;.
+          </li>
+          <li>
+            <em>Eraser</em> (1996) – Appeared in the Arnold Schwarzenegger action film.
+          </li>
+          <li>
+            <em>The Quick and the Dead</em> (1995) – Played a counselor alongside his sister Sharon Stone.
+          </li>
+          <li>
+            <em>End of the Night</em> (1990) – His official on-screen acting debut.
+          </li>
+        </ul>
+
+        <h3>The Flora Martirosyan Connection</h3>
+        <p>
+          Outside of his standard Hollywood film credits, Michael Stone leveraged his industry connections to support humanitarian causes. After meeting legendary Armenian singer Flora Martirosyan at one of her concerts, the two struck up a close friendship based on their shared love of music.
+        </p>
+        <p>
+          This bond led him to become a key organizer and spokesperson for Martirosyan&apos;s &quot;Artists for Peace&quot; initiative. Together, they launched the &quot;Never Again&quot; global concert series, using his platform to advocate for international recognition of the Armenian Genocide and to spread a message of global peace.
+        </p>
+
         <h3>Final Years</h3>
         <p>
           Five years before his passing, Michael was diagnosed with Parkinson's disease, leading to a gradual decline in his health. Despite this, he maintained his elegance, cleverly concealing his condition. His sister Kelly and her husband Bruce were his primary caregivers, providing love and support as he navigated his challenges. Michael thrived in the rehabilitation center, socializing with residents and sharing his spoken word late into the night.

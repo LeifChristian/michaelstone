@@ -357,6 +357,15 @@ p {
   color: var(--ink-soft);
 }
 
+.home-bio-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
