@@ -1,36 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,550;9..144,650&family=Figtree:wght@400;500;600&display=swap');
 
 :root,
-[data-theme='dark'] {
-  color-scheme: dark;
-  --bg: #121614;
-  --bg-deep: #0c100e;
-  --ink: #e8ebe6;
-  --ink-soft: #b4bbb5;
-  --ink-mute: #7a847d;
-  --line: rgba(232, 235, 230, 0.12);
-  --surface: rgba(28, 34, 31, 0.72);
-  --accent: #6fa894;
-  --accent-soft: #8cbcab;
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  --header-bg: rgba(12, 16, 14, 0.82);
-  --body-glow-a: rgba(95, 120, 108, 0.12);
-  --body-glow-b: rgba(80, 90, 70, 0.1);
-  --body-top: #161b18;
-  --hover-fill: rgba(232, 235, 230, 0.08);
-  --radius: 2px;
-  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-body: 'Figtree', 'Helvetica Neue', sans-serif;
-  --max: 1080px;
-  --header-h: 4.25rem;
-  color: var(--ink);
-  background: var(--bg);
-  font-family: var(--font-body);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
 [data-theme='light'] {
   color-scheme: light;
   --bg: #e8ebe6;
@@ -48,6 +18,36 @@
   --body-glow-b: rgba(180, 170, 140, 0.16);
   --body-top: #eef1ec;
   --hover-fill: rgba(28, 34, 31, 0.06);
+  --radius: 2px;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Figtree', 'Helvetica Neue', sans-serif;
+  --max: 1080px;
+  --header-h: 4.25rem;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #121614;
+  --bg-deep: #0c100e;
+  --ink: #e8ebe6;
+  --ink-soft: #b4bbb5;
+  --ink-mute: #7a847d;
+  --line: rgba(232, 235, 230, 0.12);
+  --surface: rgba(28, 34, 31, 0.72);
+  --accent: #6fa894;
+  --accent-soft: #8cbcab;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --header-bg: rgba(12, 16, 14, 0.82);
+  --body-glow-a: rgba(95, 120, 108, 0.12);
+  --body-glow-b: rgba(80, 90, 70, 0.1);
+  --body-top: #161b18;
+  --hover-fill: rgba(232, 235, 230, 0.08);
 }
 
 *,

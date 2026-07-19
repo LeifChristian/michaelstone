@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://michaelstonepoet.com" />
     <meta property="og:image" content="https://michaelstonepoet.com/images/hero.jpg" />
-    <meta name="theme-color" content="#121614" />
+    <meta name="theme-color" content="#e8ebe6" />
     <title>Michael Stone</title>
     <script>
       (function () {
@@ -24,10 +24,10 @@
           var t = localStorage.getItem('michaelstone:theme')
           document.documentElement.setAttribute(
             'data-theme',
-            t === 'light' || t === 'dark' ? t : 'dark',
+            t === 'light' || t === 'dark' ? t : 'light',
           )
         } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark')
+          document.documentElement.setAttribute('data-theme', 'light')
         }
       })()
     </script>
