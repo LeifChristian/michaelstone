@@ -8,7 +8,7 @@ At 18, Michael left his small-town roots to serve in the Air Force, bidding fare
 
 ## The Written Word
 
-Michael faced numerous struggles throughout his life, including battles with drugs and the challenges stemming from his accident. Through it all, he wrote — filling journals with poetry and lyrics that held his dreams, fears, and hard-won hopes. Those pages became the spoken-word pieces that define his voice: raw, searching, and unafraid of the dark.
+Michael faced numerous struggles throughout his life, including battles with drugs, the challenges stemming from his accident, and the loss of friends and loved ones. Through it all, he wrote — filling journals with poetry and lyrics that held his dreams, fears, and hard-won hopes. Those pages became the spoken-word pieces that define his voice: raw, searching, and unafraid of the dark.
 
 In *Soldier*, he returned to the weight of service and what war leaves behind. In *City of Angels*, he turned a clear eye on Los Angeles — beauty and violence side by side, an angel walking Sunset in the rain while the city raced past. *The Deal*, *Misfit from Your Past*, and *Utopia* dig into temptation, survival, and a world that keeps breaking. *Crusade* questions power and faith; *Renaissance Man* reaches for rebirth — rising "above the ashes like a burning flame." And in *Road to Redemption*, he names the long climb itself: "the road to redemption, to the soul of my dreams," paved with heartache, grief, and the hope of leaving it all behind.
 
