@@ -558,6 +558,36 @@ export const generatedGalleryImages: GeneratedGalleryImage[] = [
     "src": "/images/091.jpg",
     "alt": "091",
     "caption": "091"
+  },
+  {
+    "id": "img-91",
+    "src": "/images/092.jpg",
+    "alt": "092",
+    "caption": "092"
+  },
+  {
+    "id": "img-92",
+    "src": "/images/093.jpg",
+    "alt": "093",
+    "caption": "093"
+  },
+  {
+    "id": "img-93",
+    "src": "/images/094.jpg",
+    "alt": "094",
+    "caption": "094"
+  },
+  {
+    "id": "img-94",
+    "src": "/images/095.jpg",
+    "alt": "095",
+    "caption": "095"
+  },
+  {
+    "id": "img-95",
+    "src": "/images/096.jpg",
+    "alt": "096",
+    "caption": "096"
   }
 ]
 
