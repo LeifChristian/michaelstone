@@ -16,10 +16,24 @@ After spending several years in Los Angeles, where he worked on his music, poetr
 
 ## Film & Television
 
-- *Opposite Corners* (1997) – Portrayed "Billy the Butcher".
-- *Eraser* (1996) – Appeared in the Arnold Schwarzenegger action film.
-- *The Quick and the Dead* (1995) – Played a counselor alongside his sister Sharon Stone.
-- *End of the Night* (1990) – His official on-screen acting debut.
+Selected credits from his [IMDb](https://www.imdb.com/name/nm0832048/):
+
+- *Destinos Opostos* (2022) – Robert
+- *Renaissance Man* (2021) – Short
+- *City of Angels – Spoken Word* (2021) – Short
+- *A Man of a Passion* (2021 / 2020)
+- *Pancho and Lefty* (2006) – T.J. Hawk
+- *CSI: Miami* (2006) – Bill Starr
+- *Detective* (2005) – Gun Shop Owner
+- *Driving Me Crazy* (2000) – Maynard McEvoy
+- *Movie Stars* (2000) – Michael Stone
+- *The Bold and the Beautiful* (2000) – Jimmy
+- *Malevolence* (1999) – Stu Amen
+- *Lois & Clark: The New Adventures of Superman* (1997) – Hitman
+- *Opposite Corners* (1997) – Billy the Butcher
+- *Eraser* (1996) – Zoo Killer #1
+- *The Quick and the Dead* (1995) – Counselor
+- *End of the Night* (1990) – On-screen acting debut
 
 ## The Flora Martirosyan Connection
 

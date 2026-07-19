@@ -70,7 +70,17 @@ const videos: Video[] = [
 export function Videos() {
   return (
     <section className="videos-page">
-      <h1 className="page-title">Videos</h1>
+      <header className="videos-header">
+        <h1 className="page-title">Videos</h1>
+        <a
+          className="videos-imdb-link"
+          href="https://www.imdb.com/name/nm0832048/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          IMDb
+        </a>
+      </header>
       <div className="videos-grid">
         {videos.map((video) => (
           <div

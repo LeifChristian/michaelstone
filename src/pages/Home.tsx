@@ -77,18 +77,66 @@ export function Home() {
         </p>
 
         <h3>Film &amp; Television</h3>
+        <p>
+          Selected credits from his{' '}
+          <a
+            href="https://www.imdb.com/name/nm0832048/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            IMDb
+          </a>
+          :
+        </p>
         <ul className="home-bio-list">
           <li>
-            <em>Opposite Corners</em> (1997) – Portrayed &quot;Billy the Butcher&quot;.
+            <em>Destinos Opostos</em> (2022) – Robert
           </li>
           <li>
-            <em>Eraser</em> (1996) – Appeared in the Arnold Schwarzenegger action film.
+            <em>Renaissance Man</em> (2021) – Short
           </li>
           <li>
-            <em>The Quick and the Dead</em> (1995) – Played a counselor alongside his sister Sharon Stone.
+            <em>City of Angels – Spoken Word</em> (2021) – Short
           </li>
           <li>
-            <em>End of the Night</em> (1990) – His official on-screen acting debut.
+            <em>A Man of a Passion</em> (2021 / 2020)
+          </li>
+          <li>
+            <em>Pancho and Lefty</em> (2006) – T.J. Hawk
+          </li>
+          <li>
+            <em>CSI: Miami</em> (2006) – Bill Starr
+          </li>
+          <li>
+            <em>Detective</em> (2005) – Gun Shop Owner
+          </li>
+          <li>
+            <em>Driving Me Crazy</em> (2000) – Maynard McEvoy
+          </li>
+          <li>
+            <em>Movie Stars</em> (2000) – Michael Stone
+          </li>
+          <li>
+            <em>The Bold and the Beautiful</em> (2000) – Jimmy
+          </li>
+          <li>
+            <em>Malevolence</em> (1999) – Stu Amen
+          </li>
+          <li>
+            <em>Lois &amp; Clark: The New Adventures of Superman</em> (1997) –
+            Hitman
+          </li>
+          <li>
+            <em>Opposite Corners</em> (1997) – Billy the Butcher
+          </li>
+          <li>
+            <em>Eraser</em> (1996) – Zoo Killer #1
+          </li>
+          <li>
+            <em>The Quick and the Dead</em> (1995) – Counselor
+          </li>
+          <li>
+            <em>End of the Night</em> (1990) – On-screen acting debut
           </li>
         </ul>
 

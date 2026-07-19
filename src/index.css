@@ -1033,6 +1033,32 @@ p {
   margin: 0 auto;
 }
 
+.videos-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.videos-header .page-title {
+  margin: 0;
+}
+
+.videos-imdb-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.home-bio a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .videos-grid {
   display: flex;
   flex-direction: column;
