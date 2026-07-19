@@ -1,6 +1,11 @@
 type Video =
   | {
       title: string
+      type: 'local'
+      src: string
+    }
+  | {
+      title: string
       type: 'vimeo'
       embedSrc: string
       watchUrl: string
@@ -13,6 +18,11 @@ type Video =
     }
 
 const videos: Video[] = [
+  {
+    title: 'Michael Stone',
+    type: 'local',
+    src: '/videos/01-michael.mp4',
+  },
   {
     title: 'Renaissance Man – Spoken Word',
     type: 'vimeo',
@@ -45,8 +55,28 @@ export function Videos() {
       <h1 className="page-title">Videos</h1>
       <div className="videos-grid">
         {videos.map((video) => (
-          <div key={video.watchUrl} className="video-card">
-            {video.type === 'vimeo' ? (
+          <div
+            key={video.type === 'local' ? video.src : video.watchUrl}
+            className="video-card"
+          >
+            {video.type === 'local' ? (
+              <>
+                <div className="video-embed video-embed-local">
+                  <video
+                    src={video.src}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    title={video.title}
+                  >
+                    <a href={video.src}>Download video</a>
+                  </video>
+                </div>
+                <div className="video-meta">
+                  <h2 className="video-title">{video.title}</h2>
+                </div>
+              </>
+            ) : video.type === 'vimeo' ? (
               <>
                 <div className="video-embed">
                   <iframe
@@ -71,9 +101,7 @@ export function Videos() {
             ) : (
               <div className="video-link-card">
                 <h2 className="video-title">{video.title}</h2>
-                <p className="video-link-note">
-                  Opens in a new tab.
-                </p>
+                <p className="video-link-note">Opens in a new tab.</p>
                 <a
                   className="button button-primary"
                   href={video.watchUrl}
