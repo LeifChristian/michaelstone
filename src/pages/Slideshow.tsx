@@ -227,10 +227,6 @@ export function Slideshow() {
         className={`slideshow-chrome${chromeVisible || !fullscreen ? ' is-visible' : ''}`}
         aria-hidden={chromeHidden}
       >
-        <p className="slideshow-count">
-          {index + 1} / {total}
-        </p>
-
         {needsGesture || muted ? (
           <p className="slideshow-audio-hint">
             {muted
