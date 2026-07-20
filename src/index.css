@@ -585,15 +585,27 @@ p {
 }
 
 @media (min-width: 800px) {
+  /*
+   * Desktop: photo on top (full-bleed, face clear), title band underneath.
+   * Overlaying type on this tall portrait always covers his face on wide screens.
+   */
   .hero {
-    /* Tall enough that face sits above the title block */
-    min-height: min(92svh, 54rem);
+    display: grid;
+    grid-template-rows: minmax(28rem, 70svh) auto;
+    align-items: stretch;
+    min-height: 0;
+    background: #121614;
+  }
+
+  .hero-media {
+    position: relative;
+    inset: auto;
+    min-height: 0;
   }
 
   .hero-image {
     object-fit: cover;
-    /* Prefer the top of the portrait so his head isn't cropped */
-    object-position: center 6%;
+    object-position: center 20%;
   }
 
   .hero-media::after {
@@ -601,15 +613,16 @@ p {
       linear-gradient(
         180deg,
         rgba(18, 22, 20, 0) 0%,
-        rgba(18, 22, 20, 0) 48%,
-        rgba(18, 22, 20, 0.42) 72%,
-        rgba(18, 22, 20, 0.9) 100%
+        rgba(18, 22, 20, 0) 75%,
+        rgba(18, 22, 20, 0.35) 100%
       );
   }
 
   .hero-copy {
-    max-width: 34rem;
-    padding: 0.5rem 0 2rem;
+    width: min(100% - 3.5rem, var(--max));
+    max-width: none;
+    margin-inline: auto;
+    padding: 1.75rem 0 2.25rem;
   }
 
   .hero-name {
