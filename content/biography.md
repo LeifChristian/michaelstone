@@ -16,7 +16,11 @@ He carried that poetry into performance, collaborating with bands and finding fr
 
 ## Los Angeles & Montana
 
-After spending several years in Los Angeles, where he worked on his music and poetry, ran a masonry business, and managed nightclubs in Hollywood — and earlier in Florida — Michael eventually moved to Montana to care for his mother after his father's passing. There, he found a true home in the serene landscape, allowing him to reconnect with nature and enjoy life's simplicities. He performed at Maverik's Grill and formed a close friendship with Keith, the restaurant's proprietor.
+Michael spent several years in Los Angeles working on his music and poetry and running a masonry business. He also managed nightclubs in Florida and later in Hollywood.
+
+In Los Angeles he recorded an album of his spoken-word poetry with producer and engineer Robert Davis — whose work includes artists such as Lauryn Hill and Eddie Money — and Bernard Fowler of the Rolling Stones, alongside a cast of Montana musicians. Those sessions are the recordings you can hear on this site.
+
+He eventually moved to Montana to care for his mother after his father's passing. There he found a true home in the landscape, reconnecting with nature and life's simpler pleasures. He performed at Maverick's Grill and formed a close friendship with Keith, the restaurant's proprietor.
 
 ## Film & Television
 
