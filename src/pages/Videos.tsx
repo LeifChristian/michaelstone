@@ -25,9 +25,16 @@ type Video =
 
 const videos: Video[] = [
   {
-    title: 'Michael Stone',
-    type: 'local',
-    src: '/videos/01-michael.mp4',
+    title: 'City of Angels – Spoken Word',
+    type: 'vimeo',
+    embedSrc: 'https://player.vimeo.com/video/756011667',
+    watchUrl: 'https://vimeo.com/756011667',
+  },
+  {
+    title: 'Renaissance Man – Spoken Word',
+    type: 'vimeo',
+    embedSrc: 'https://player.vimeo.com/video/756011964',
+    watchUrl: 'https://vimeo.com/756011964',
   },
   {
     title: 'Soldier – Michael Stone',
@@ -42,28 +49,21 @@ const videos: Video[] = [
     watchUrl: 'https://www.youtube.com/watch?v=aJLtVZ6Xn4o',
   },
   {
-    title: 'Renaissance Man – Spoken Word',
-    type: 'vimeo',
-    embedSrc: 'https://player.vimeo.com/video/756011964',
-    watchUrl: 'https://vimeo.com/756011964',
-  },
-  {
     title: 'A Man of a Passion – Spoken Word',
     type: 'link',
     watchUrl: 'https://vimeo.com/756011799',
     label: 'Watch on Vimeo',
   },
   {
-    title: 'City of Angels – Spoken Word',
-    type: 'vimeo',
-    embedSrc: 'https://player.vimeo.com/video/756011667',
-    watchUrl: 'https://vimeo.com/756011667',
-  },
-  {
     title: 'Michael Stone',
     type: 'link',
     watchUrl: 'https://www.facebook.com/share/v/1HjAXFa942/',
     label: 'Watch on Facebook',
+  },
+  {
+    title: 'Michael Stone',
+    type: 'local',
+    src: '/videos/01-michael.mp4',
   },
 ]
 
