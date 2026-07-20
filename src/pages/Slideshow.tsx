@@ -3,12 +3,17 @@ import { MediaImage } from '../components/MediaImage'
 import { galleryImages } from '../config/gallery'
 
 const SLIDE_MS = 5000
+const SLIDESHOW_AUDIO = '/music/03-Road to Redemption Mix.mp3'
 
 export function Slideshow() {
   const rootRef = useRef<HTMLElement>(null)
+  const audioRef = useRef<HTMLAudioElement>(null)
   const [index, setIndex] = useState(0)
   const [playing, setPlaying] = useState(true)
   const [fullscreen, setFullscreen] = useState(false)
+  /** Start muted so browsers allow autoplay; user can unmute. */
+  const [muted, setMuted] = useState(true)
+  const [needsGesture, setNeedsGesture] = useState(false)
 
   const total = galleryImages.length
   const image = galleryImages[index]
@@ -19,11 +24,31 @@ export function Slideshow() {
     setIndex((current) => (current + delta + total) % total)
   })
 
+  const ensureAudioPlaying = useEffectEvent(async (nextMuted: boolean) => {
+    const audio = audioRef.current
+    if (!audio) return
+    audio.muted = nextMuted
+    audio.loop = true
+    try {
+      await audio.play()
+      setNeedsGesture(false)
+    } catch {
+      setNeedsGesture(true)
+    }
+  })
+
   useEffect(() => {
     if (!playing || total < 2) return
     const id = window.setInterval(() => go(1), SLIDE_MS)
     return () => window.clearInterval(id)
   }, [playing, total, go, index])
+
+  useEffect(() => {
+    void ensureAudioPlaying(muted)
+    return () => {
+      audioRef.current?.pause()
+    }
+  }, [ensureAudioPlaying, muted])
 
   useEffect(() => {
     const onFullscreenChange = () => {
@@ -47,6 +72,12 @@ export function Slideshow() {
     }
   })
 
+  const toggleMute = useEffectEvent(() => {
+    const next = !muted
+    setMuted(next)
+    void ensureAudioPlaying(next)
+  })
+
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'ArrowRight') go(1)
@@ -58,10 +89,13 @@ export function Slideshow() {
       if (event.key === 'f' || event.key === 'F') {
         void toggleFullscreen()
       }
+      if (event.key === 'm' || event.key === 'M') {
+        toggleMute()
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [go, toggleFullscreen])
+  }, [go, toggleFullscreen, toggleMute])
 
   if (!total || !image) {
     return (
@@ -77,6 +111,15 @@ export function Slideshow() {
       className={`slideshow-page${fullscreen ? ' is-fullscreen' : ''}`}
       aria-label="Photo slideshow"
     >
+      <audio
+        ref={audioRef}
+        src={SLIDESHOW_AUDIO}
+        loop
+        preload="auto"
+        playsInline
+        muted={muted}
+      />
+
       <div className="slideshow-stage">
         <MediaImage
           key={image.id}
@@ -95,6 +138,14 @@ export function Slideshow() {
           {index + 1} / {total}
         </p>
 
+        {needsGesture || muted ? (
+          <p className="slideshow-audio-hint">
+            {muted
+              ? 'Playing muted — tap Sound on for Road to Redemption.'
+              : 'Tap Sound on to allow audio.'}
+          </p>
+        ) : null}
+
         <div className="slideshow-controls">
           <button type="button" onClick={() => go(-1)} aria-label="Previous photo">
             ‹
@@ -108,6 +159,15 @@ export function Slideshow() {
           </button>
           <button type="button" onClick={() => go(1)} aria-label="Next photo">
             ›
+          </button>
+          <button
+            type="button"
+            className={!muted ? 'is-active' : undefined}
+            onClick={() => toggleMute()}
+            aria-label={muted ? 'Unmute music' : 'Mute music'}
+            aria-pressed={!muted}
+          >
+            {muted ? 'Sound on' : 'Mute'}
           </button>
           <button
             type="button"

@@ -449,6 +449,14 @@ p {
   letter-spacing: 0.04em;
 }
 
+.slideshow-audio-hint {
+  margin: 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: rgba(244, 247, 244, 0.72);
+  line-height: 1.4;
+}
+
 .slideshow-controls {
   display: flex;
   flex-wrap: wrap;
@@ -468,6 +476,11 @@ p {
 
 .slideshow-controls button:hover {
   background: rgba(244, 247, 244, 0.16);
+}
+
+.slideshow-controls button.is-active {
+  border-color: rgba(244, 247, 244, 0.55);
+  background: rgba(244, 247, 244, 0.18);
 }
 
 .slideshow-progress {
