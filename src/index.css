@@ -586,13 +586,14 @@ p {
 
 @media (min-width: 800px) {
   .hero {
-    /* Shorter wide band so cover crops less aggressively */
-    min-height: min(72svh, 38rem);
+    /* Tall enough that face sits above the title block */
+    min-height: min(92svh, 54rem);
   }
 
   .hero-image {
     object-fit: cover;
-    object-position: center 18%;
+    /* Prefer the top of the portrait so his head isn't cropped */
+    object-position: center 6%;
   }
 
   .hero-media::after {
@@ -600,15 +601,19 @@ p {
       linear-gradient(
         180deg,
         rgba(18, 22, 20, 0) 0%,
-        rgba(18, 22, 20, 0.05) 40%,
-        rgba(18, 22, 20, 0.5) 68%,
-        rgba(18, 22, 20, 0.88) 100%
+        rgba(18, 22, 20, 0) 48%,
+        rgba(18, 22, 20, 0.42) 72%,
+        rgba(18, 22, 20, 0.9) 100%
       );
   }
 
   .hero-copy {
-    padding-top: 1.5rem;
-    padding-bottom: 2.25rem;
+    max-width: 34rem;
+    padding: 0.5rem 0 2rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
   }
 }
 
@@ -1409,8 +1414,6 @@ p {
   .hero-copy {
     width: min(100% - 3.5rem, var(--max));
     margin-inline: auto;
-    max-width: none;
-    padding: 3.5rem 0 3.75rem;
   }
 
   .hero-intro {
