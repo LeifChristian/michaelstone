@@ -642,6 +642,12 @@ export const generatedGalleryImages: GeneratedGalleryImage[] = [
     "src": "/images/104.jpg",
     "alt": "104",
     "caption": "104"
+  },
+  {
+    "id": "img-105",
+    "src": "/images/105.jpg",
+    "alt": "105",
+    "caption": "105"
   }
 ]
 
