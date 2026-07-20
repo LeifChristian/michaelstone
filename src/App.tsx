@@ -8,6 +8,7 @@ import { Lyrics } from './pages/Lyrics'
 import { Videos } from './pages/Videos'
 import { Guestbook } from './pages/Guestbook'
 import { GuestbookModerate } from './pages/GuestbookModerate'
+import { Slideshow } from './pages/Slideshow'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="lyrics" element={<Lyrics />} />
           <Route path="videos" element={<Videos />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="slideshow" element={<Slideshow />} />
           <Route path="guestbook" element={<Guestbook />} />
           <Route path="guestbook/moderate" element={<GuestbookModerate />} />
           <Route path="biography" element={<Biography />} />

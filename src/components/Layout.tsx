@@ -9,6 +9,7 @@ const links: { to: string; label: string; end?: boolean }[] = [
   { to: '/lyrics', label: 'Lyrics' },
   { to: '/videos', label: 'Videos' },
   { to: '/gallery', label: 'Photos' },
+  { to: '/slideshow', label: 'Slideshow' },
   { to: '/guestbook', label: 'Guestbook' },
   { to: '/biography', label: 'Story' },
 ]
@@ -17,6 +18,7 @@ export function Layout() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const menuId = useId()
+  const isSlideshow = location.pathname === '/slideshow'
 
   useEffect(() => {
     setMenuOpen(false)
@@ -36,7 +38,7 @@ export function Layout() {
   }, [menuOpen])
 
   return (
-    <div className="site">
+    <div className={`site${isSlideshow ? ' is-slideshow' : ''}`}>
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -93,14 +95,16 @@ export function Layout() {
         ) : null}
       </header>
 
-      <main id="main" className="site-main">
+      <main id="main" className={`site-main${isSlideshow ? ' is-slideshow-main' : ''}`}>
         <Outlet />
       </main>
 
-      <footer className="site-footer">
-        <p>In memory of {site.name}</p>
-        <p className="footer-quiet">{site.url.replace(/^https?:\/\//, '')}</p>
-      </footer>
+      {!isSlideshow ? (
+        <footer className="site-footer">
+          <p>In memory of {site.name}</p>
+          <p className="footer-quiet">{site.url.replace(/^https?:\/\//, '')}</p>
+        </footer>
+      ) : null}
     </div>
   )
 }
