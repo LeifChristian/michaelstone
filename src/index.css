@@ -565,9 +565,9 @@ p {
     linear-gradient(
       180deg,
       rgba(18, 22, 20, 0) 0%,
-      rgba(18, 22, 20, 0) 42%,
-      rgba(18, 22, 20, 0.35) 68%,
-      rgba(18, 22, 20, 0.78) 100%
+      rgba(18, 22, 20, 0.08) 38%,
+      rgba(18, 22, 20, 0.45) 62%,
+      rgba(18, 22, 20, 0.82) 100%
     );
 }
 
@@ -576,8 +576,8 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Face sits ~20–35% down the photo — keep that in view */
-  object-position: center 30%;
+  /* Face is in the upper third of the cropped portrait */
+  object-position: center 22%;
 }
 
 .hero-image {
@@ -586,12 +586,13 @@ p {
 
 @media (min-width: 800px) {
   .hero {
-    min-height: min(90svh, 52rem);
+    /* Shorter wide band so cover crops less aggressively */
+    min-height: min(72svh, 38rem);
   }
 
   .hero-image {
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center 18%;
   }
 
   .hero-media::after {
@@ -599,10 +600,15 @@ p {
       linear-gradient(
         180deg,
         rgba(18, 22, 20, 0) 0%,
-        rgba(18, 22, 20, 0) 55%,
-        rgba(18, 22, 20, 0.4) 78%,
-        rgba(18, 22, 20, 0.82) 100%
+        rgba(18, 22, 20, 0.05) 40%,
+        rgba(18, 22, 20, 0.5) 68%,
+        rgba(18, 22, 20, 0.88) 100%
       );
+  }
+
+  .hero-copy {
+    padding-top: 1.5rem;
+    padding-bottom: 2.25rem;
   }
 }
 
