@@ -4,15 +4,18 @@ import { galleryImages } from '../config/gallery'
 
 const SLIDE_MS = 5000
 const FADE_MS = 1100
+const CHROME_HIDE_MS = 3000
 const SLIDESHOW_AUDIO = '/music/03-Road to Redemption Mix.mp3'
 
 export function Slideshow() {
   const rootRef = useRef<HTMLElement>(null)
   const audioRef = useRef<HTMLAudioElement>(null)
+  const chromeHideTimer = useRef<number | null>(null)
   const [index, setIndex] = useState(0)
   const [prevIndex, setPrevIndex] = useState<number | null>(null)
   const [playing, setPlaying] = useState(true)
   const [fullscreen, setFullscreen] = useState(false)
+  const [chromeVisible, setChromeVisible] = useState(true)
   /** Start muted so browsers allow autoplay; user can unmute. */
   const [muted, setMuted] = useState(true)
   const [needsGesture, setNeedsGesture] = useState(false)
@@ -21,6 +24,27 @@ export function Slideshow() {
   const image = galleryImages[index]
   const prevImage = prevIndex != null ? galleryImages[prevIndex] : null
   const nextImage = total ? galleryImages[(index + 1) % total] : null
+
+  const clearChromeTimer = useEffectEvent(() => {
+    if (chromeHideTimer.current != null) {
+      window.clearTimeout(chromeHideTimer.current)
+      chromeHideTimer.current = null
+    }
+  })
+
+  const scheduleChromeHide = useEffectEvent(() => {
+    clearChromeTimer()
+    if (!fullscreen) return
+    chromeHideTimer.current = window.setTimeout(() => {
+      setChromeVisible(false)
+      chromeHideTimer.current = null
+    }, CHROME_HIDE_MS)
+  })
+
+  const revealChrome = useEffectEvent(() => {
+    setChromeVisible(true)
+    scheduleChromeHide()
+  })
 
   const go = useEffectEvent((delta: number) => {
     if (!total) return
@@ -66,11 +90,28 @@ export function Slideshow() {
 
   useEffect(() => {
     const onFullscreenChange = () => {
-      setFullscreen(Boolean(document.fullscreenElement))
+      const active = Boolean(document.fullscreenElement)
+      setFullscreen(active)
+      if (active) {
+        setChromeVisible(true)
+      } else {
+        setChromeVisible(true)
+        clearChromeTimer()
+      }
     }
     document.addEventListener('fullscreenchange', onFullscreenChange)
     return () => document.removeEventListener('fullscreenchange', onFullscreenChange)
-  }, [])
+  }, [clearChromeTimer])
+
+  useEffect(() => {
+    if (!fullscreen) {
+      setChromeVisible(true)
+      clearChromeTimer()
+      return
+    }
+    scheduleChromeHide()
+    return () => clearChromeTimer()
+  }, [fullscreen, clearChromeTimer, scheduleChromeHide])
 
   const toggleFullscreen = useEffectEvent(async () => {
     const node = rootRef.current
@@ -94,6 +135,7 @@ export function Slideshow() {
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
+      if (fullscreen) revealChrome()
       if (event.key === 'ArrowRight') go(1)
       if (event.key === 'ArrowLeft') go(-1)
       if (event.key === ' ') {
@@ -109,7 +151,7 @@ export function Slideshow() {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [go, toggleFullscreen, toggleMute])
+  }, [go, toggleFullscreen, toggleMute, fullscreen, revealChrome])
 
   if (!total || !image) {
     return (
@@ -119,12 +161,34 @@ export function Slideshow() {
     )
   }
 
+  const chromeHidden = fullscreen && !chromeVisible
+
   return (
     <section
       ref={rootRef}
-      className={`slideshow-page${fullscreen ? ' is-fullscreen' : ''}`}
+      className={[
+        'slideshow-page',
+        fullscreen ? 'is-fullscreen' : '',
+        chromeHidden ? 'is-chrome-hidden' : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
       aria-label="Photo slideshow"
       style={{ '--slideshow-fade-ms': `${FADE_MS}ms` } as CSSProperties}
+      onPointerDown={(event) => {
+        if (!fullscreen) return
+        const target = event.target as HTMLElement | null
+        if (target?.closest('.slideshow-chrome')) {
+          revealChrome()
+          return
+        }
+        if (chromeHidden) {
+          event.preventDefault()
+          revealChrome()
+        } else {
+          scheduleChromeHide()
+        }
+      }}
     >
       <audio
         ref={audioRef}
@@ -159,7 +223,10 @@ export function Slideshow() {
         ) : null}
       </div>
 
-      <div className="slideshow-chrome">
+      <div
+        className={`slideshow-chrome${chromeVisible || !fullscreen ? ' is-visible' : ''}`}
+        aria-hidden={chromeHidden}
+      >
         <p className="slideshow-count">
           {index + 1} / {total}
         </p>

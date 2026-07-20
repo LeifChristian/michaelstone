@@ -397,6 +397,12 @@ p {
   width: 100%;
 }
 
+.slideshow-page:fullscreen.is-chrome-hidden,
+.slideshow-page.is-fullscreen.is-chrome-hidden {
+  grid-template-rows: 1fr;
+  cursor: none;
+}
+
 .slideshow-stage {
   position: relative;
   display: grid;
@@ -441,6 +447,13 @@ p {
   height: calc(100svh - 6.5rem);
 }
 
+.slideshow-page:fullscreen.is-chrome-hidden .slideshow-image,
+.slideshow-page:fullscreen.is-chrome-hidden .slideshow-stage .media-fallback,
+.slideshow-page.is-fullscreen.is-chrome-hidden .slideshow-image,
+.slideshow-page.is-fullscreen.is-chrome-hidden .slideshow-stage .media-fallback {
+  height: 100svh;
+}
+
 .slideshow-stage .media-fallback {
   background: #1a1a1a;
   width: min(100%, 40rem);
@@ -477,6 +490,27 @@ p {
   gap: 0.65rem;
   padding: 0.85rem 1rem 1.15rem;
   background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.85));
+}
+
+.slideshow-page:fullscreen .slideshow-chrome,
+.slideshow-page.is-fullscreen .slideshow-chrome {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.6rem);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.slideshow-page:fullscreen .slideshow-chrome.is-visible,
+.slideshow-page.is-fullscreen .slideshow-chrome.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  cursor: auto;
 }
 
 .slideshow-count {
