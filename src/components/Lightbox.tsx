@@ -1,5 +1,7 @@
-import { useEffect, useEffectEvent, useRef } from 'react'
+import { useEffect, useEffectEvent, useRef, useState, type MouseEvent } from 'react'
+import { createPortal } from 'react-dom'
 import type { GalleryImage } from '../config/gallery'
+import { site } from '../config/site'
 import { MediaImage } from './MediaImage'
 
 type LightboxProps = {
@@ -9,8 +11,40 @@ type LightboxProps = {
   onChange: (index: number) => void
 }
 
+function filenameFromSrc(src: string, fallback: string) {
+  const base = src.split('/').pop()?.split('?')[0]
+  if (base && base.includes('.')) return base
+  return `${fallback.replace(/\s+/g, '-').toLowerCase() || 'photo'}.jpg`
+}
+
+async function downloadPhoto(src: string, filename: string) {
+  try {
+    const res = await fetch(src)
+    if (!res.ok) throw new Error('fetch failed')
+    const blob = await res.blob()
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = filename
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    URL.revokeObjectURL(url)
+  } catch {
+    const a = document.createElement('a')
+    a.href = src
+    a.download = filename
+    a.target = '_blank'
+    a.rel = 'noopener'
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+  }
+}
+
 export function Lightbox({ images, index, onClose, onChange }: LightboxProps) {
   const touchStartX = useRef<number | null>(null)
+  const [downloading, setDownloading] = useState(false)
   const image = images[index]
 
   const go = useEffectEvent((next: number) => {
@@ -38,7 +72,20 @@ export function Lightbox({ images, index, onClose, onChange }: LightboxProps) {
 
   if (!image) return null
 
-  return (
+  const filename = filenameFromSrc(image.src, image.alt || image.id)
+
+  const handleDownload = async (event: MouseEvent) => {
+    event.stopPropagation()
+    if (downloading) return
+    setDownloading(true)
+    try {
+      await downloadPhoto(image.src, filename)
+    } finally {
+      setDownloading(false)
+    }
+  }
+
+  return createPortal(
     <div
       className="lightbox"
       role="dialog"
@@ -89,14 +136,26 @@ export function Lightbox({ images, index, onClose, onChange }: LightboxProps) {
           className="lightbox-image"
           loading="eager"
         />
-        {(image.caption || image.alt) && (
-          <figcaption>
-            {image.caption ?? image.alt}
+        <figcaption className="lightbox-caption">
+          <div className="lightbox-caption-text">
+            <span>{image.caption ?? image.alt}</span>
             <span className="lightbox-count">
               {index + 1} / {images.length}
             </span>
-          </figcaption>
-        )}
+          </div>
+          {site.allowDownloads ? (
+            <button
+              type="button"
+              className="lightbox-download"
+              onClick={handleDownload}
+              disabled={downloading}
+              aria-label={`Download ${filename}`}
+            >
+              <DownloadIcon />
+              <span>{downloading ? 'Saving…' : 'Download'}</span>
+            </button>
+          ) : null}
+        </figcaption>
       </figure>
 
       <button
@@ -110,6 +169,18 @@ export function Lightbox({ images, index, onClose, onChange }: LightboxProps) {
       >
         ›
       </button>
-    </div>
+    </div>,
+    document.body,
+  )
+}
+
+function DownloadIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M11 4h2v8.2l2.6-2.6 1.4 1.4L12 16.4 6.999 11l1.4-1.4L11 12.2V4zm-5 14h12v2H6v-2z"
+      />
+    </svg>
   )
 }
