@@ -59,4 +59,4 @@ It's important to acknowledge Heather and Evan, who worked alongside the family 
 
 Michael Stone passed away on May 13, 2026, but his legacy lives on through his music, poetry, and the memories he created. He was a beloved brother, uncle, and friend, known for his polished style and joyful spirit. His nephews and niece, Kaylee and Hunter, affectionately dubbed him "Uncle Mike Millionaire" for his rock 'n' roll elegance and fun-loving nature. Memory is how we keep company with those we love, and through his words and music, Michael will forever remain close to our hearts.
 
-Michael is survived by his son Brian, sisters Kelly and Sharon. He was preceded in death by his father Joseph Stone, son Colin Stone, nephew River Stone, and brother Patrick Stone.
+Michael is survived by his son Brian; sisters Kelly and Sharon; and his nephews and niece, Quinn Stone, Laird Stone, Roan Stone, Hunter Stone, and Kaylee Stone. He was preceded in death by his father Joseph Stone, his mother Dorothy Stone, son Colin Stone, nephew River Stone, and brother Patrick Stone.
