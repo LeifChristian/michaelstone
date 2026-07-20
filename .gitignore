@@ -33,3 +33,4 @@ public/wavs/**/*.wav
 *.sw?
 STONE*.zip
 .dev.vars.tmp
+.venv*
