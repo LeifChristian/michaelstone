@@ -170,7 +170,7 @@ export function Home() {
 
         <h3>Legacy</h3>
         <p>
-          Michael Stone passed away in 2026, but his legacy lives on through his music, poetry, and the memories he created. He was a beloved brother, uncle, and friend, known for his polished style and joyful spirit. His nephews and niece, Kaylee and Hunter, affectionately dubbed him "Uncle Mike Millionaire" for his rock 'n' roll elegance and fun-loving nature. Memory is how we keep company with those we love, and through his words and music, Michael will forever remain close to our hearts.
+          Michael Stone passed away on May 13, 2026, but his legacy lives on through his music, poetry, and the memories he created. He was a beloved brother, uncle, and friend, known for his polished style and joyful spirit. His nephews and niece, Kaylee and Hunter, affectionately dubbed him "Uncle Mike Millionaire" for his rock 'n' roll elegance and fun-loving nature. Memory is how we keep company with those we love, and through his words and music, Michael will forever remain close to our hearts.
         </p>
         <p>
           Michael is survived by his son Brian, sisters Kelly and Sharon. He was preceded in death by his father Joseph Stone, son Colin Stone, nephew River Stone, and brother Patrick Stone.
