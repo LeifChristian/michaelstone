@@ -14,8 +14,10 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "convert:wav": "bash scripts/convert-wav-to-mp3.sh",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=michaelstone --branch=main",
-    "cf:setup": "bash scripts/cloudflare-setup.sh"
+    "deploy": "npm run build && wrangler pages deploy --project-name=michaelstone --branch=main",
+    "cf:setup": "bash scripts/cloudflare-setup.sh",
+    "guestbook": "node scripts/guestbook.mjs",
+    "guestbook:migrate": "wrangler d1 execute michaelstone-guestbook --remote --file=schema/guestbook.sql"
   },
   "dependencies": {
     "react": "^19.2.7",

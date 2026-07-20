@@ -180,6 +180,10 @@ export function Home() {
           <span>Photographs</span>
           <span aria-hidden="true">→</span>
         </Link>
+        <Link to="/guestbook" className="path-link">
+          <span>Guestbook</span>
+          <span aria-hidden="true">→</span>
+        </Link>
         <Link to="/lyrics" className="path-link">
           <span>Lyrics</span>
           <span aria-hidden="true">→</span>

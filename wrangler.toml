@@ -2,5 +2,7 @@ name = "michaelstone"
 compatibility_date = "2026-07-16"
 pages_build_output_dir = "dist"
 
-# Used by GitHub Actions + local deploy. Set in repo secrets or .env (not committed).
-# account_id = "your-account-id"
+[[d1_databases]]
+binding = "DB"
+database_name = "michaelstone-guestbook"
+database_id = "abbf0b2e-cf7a-4b88-997f-5609d1b6918b"

@@ -6,6 +6,8 @@ import { Gallery } from './pages/Gallery'
 import { Biography } from './pages/Biography'
 import { Lyrics } from './pages/Lyrics'
 import { Videos } from './pages/Videos'
+import { Guestbook } from './pages/Guestbook'
+import { GuestbookModerate } from './pages/GuestbookModerate'
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
           <Route path="lyrics" element={<Lyrics />} />
           <Route path="videos" element={<Videos />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="guestbook" element={<Guestbook />} />
+          <Route path="guestbook/moderate" element={<GuestbookModerate />} />
           <Route path="biography" element={<Biography />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

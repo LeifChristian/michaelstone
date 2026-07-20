@@ -8,6 +8,7 @@ const links: { to: string; label: string; end?: boolean }[] = [
   { to: '/lyrics', label: 'Lyrics' },
   { to: '/videos', label: 'Videos' },
   { to: '/gallery', label: 'Photos' },
+  { to: '/guestbook', label: 'Guestbook' },
   { to: '/biography', label: 'Story' },
 ]
 
