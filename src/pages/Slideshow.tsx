@@ -1,14 +1,16 @@
-import { useEffect, useEffectEvent, useRef, useState } from 'react'
+import { useEffect, useEffectEvent, useRef, useState, type CSSProperties } from 'react'
 import { MediaImage } from '../components/MediaImage'
 import { galleryImages } from '../config/gallery'
 
 const SLIDE_MS = 5000
+const FADE_MS = 1100
 const SLIDESHOW_AUDIO = '/music/03-Road to Redemption Mix.mp3'
 
 export function Slideshow() {
   const rootRef = useRef<HTMLElement>(null)
   const audioRef = useRef<HTMLAudioElement>(null)
   const [index, setIndex] = useState(0)
+  const [prevIndex, setPrevIndex] = useState<number | null>(null)
   const [playing, setPlaying] = useState(true)
   const [fullscreen, setFullscreen] = useState(false)
   /** Start muted so browsers allow autoplay; user can unmute. */
@@ -17,11 +19,17 @@ export function Slideshow() {
 
   const total = galleryImages.length
   const image = galleryImages[index]
+  const prevImage = prevIndex != null ? galleryImages[prevIndex] : null
   const nextImage = total ? galleryImages[(index + 1) % total] : null
 
   const go = useEffectEvent((delta: number) => {
     if (!total) return
-    setIndex((current) => (current + delta + total) % total)
+    setIndex((current) => {
+      const next = (current + delta + total) % total
+      if (next === current) return current
+      setPrevIndex(current)
+      return next
+    })
   })
 
   const ensureAudioPlaying = useEffectEvent(async (nextMuted: boolean) => {
@@ -42,6 +50,12 @@ export function Slideshow() {
     const id = window.setInterval(() => go(1), SLIDE_MS)
     return () => window.clearInterval(id)
   }, [playing, total, go, index])
+
+  useEffect(() => {
+    if (prevIndex == null) return
+    const id = window.setTimeout(() => setPrevIndex(null), FADE_MS)
+    return () => window.clearTimeout(id)
+  }, [prevIndex, index])
 
   useEffect(() => {
     void ensureAudioPlaying(muted)
@@ -110,6 +124,7 @@ export function Slideshow() {
       ref={rootRef}
       className={`slideshow-page${fullscreen ? ' is-fullscreen' : ''}`}
       aria-label="Photo slideshow"
+      style={{ '--slideshow-fade-ms': `${FADE_MS}ms` } as CSSProperties}
     >
       <audio
         ref={audioRef}
@@ -121,13 +136,24 @@ export function Slideshow() {
       />
 
       <div className="slideshow-stage">
-        <MediaImage
-          key={image.id}
-          src={image.src}
-          alt={image.alt}
-          className="slideshow-image"
-          loading="eager"
-        />
+        {prevImage ? (
+          <div className="slideshow-layer is-outgoing" key={`out-${prevImage.id}`}>
+            <MediaImage
+              src={prevImage.src}
+              alt=""
+              className="slideshow-image"
+              loading="eager"
+            />
+          </div>
+        ) : null}
+        <div className="slideshow-layer is-incoming" key={`in-${image.id}`}>
+          <MediaImage
+            src={image.src}
+            alt={image.alt}
+            className="slideshow-image"
+            loading="eager"
+          />
+        </div>
         {nextImage ? (
           <img src={nextImage.src} alt="" className="slideshow-preload" aria-hidden="true" />
         ) : null}
